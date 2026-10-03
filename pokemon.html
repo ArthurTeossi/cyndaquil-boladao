@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon - Cyndaquil</title>
+</head>
+<body>
+<script>
+var cyndaquil = {
+    nome: "Cyndaquil",
+    numeroPokedex: 155,
+    tipo: "Fogo",
+    nivel: 10,
+    vida: 100,
+    energia: 80,
+    altura: 0.5,
+    peso: 7.9,
+    forca: 52,
+    defesa: 43,
+    velocidade: 65,
+    habilidade: "Blaze",
+
+    atacar: function() {
+        this.energia -= 10;
+        console.log("Cyndaquil atacou!");
+    },
+
+    usarBrasas: function() {
+        this.energia -= 15;
+        console.log("Cyndaquil usou Brasas!");
+    },
+
+    receberDano: function(dano) {
+        this.vida -= dano;
+        console.log("Cyndaquil recebeu " + dano + " de dano.");
+    },
+
+    descansar: function() {
+        this.energia += 20;
+        console.log("Cyndaquil descansou e recuperou energia.");
+    },
+
+    comer: function() {
+        this.energia += 10;
+        console.log("Cyndaquil comeu e recuperou energia.");
+    },
+
+    treinar: function() {
+        this.nivel += 1;
+        this.forca += 2;
+        console.log("Cyndaquil treinou e ficou mais forte!");
+    }
+};
+
+console.log(cyndaquil);
+console.log("Nome:", cyndaquil.nome);
+console.log("Tipo:", cyndaquil.tipo);
+console.log("Vida atual:", cyndaquil.vida);
+
+cyndaquil.atacar();
+cyndaquil.usarBrasas();
+cyndaquil.receberDano(20);
+cyndaquil.descansar();
+cyndaquil.treinar();
+
+console.log("Vida após as ações:", cyndaquil.vida);
+console.log("Energia após as ações:", cyndaquil.energia);
+console.log("Nível após as ações:", cyndaquil.nivel);
+</script>
+</body>
+</html>
